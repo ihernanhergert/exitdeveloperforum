@@ -1,5 +1,5 @@
 import Head from "next/head";
-import JavascriptData from "../components/javascriptData";
+import JavascriptData from "../components/JavascriptData";
 
 export default function Home() {
 

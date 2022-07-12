@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 
 const JavascriptData = () => {
   const question1 = `

@@ -1,5 +1,5 @@
 import React from 'react'
-import JavascriptData from '../components/javascriptData'
+import JavascriptData from "../components/JavascriptData";
 
 const javascript = () => {
   return (
