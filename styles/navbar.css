@@ -38,11 +38,6 @@
     filter: saturate(823%) blur(0.1rem) ;
   }
   
-  .logo:active{
-    background-color: orangered;
-    color: white;
-    border: 4px solid orangered
-  }
 
   .pLogo{
     color: white;
@@ -97,7 +92,15 @@
     width: 200px;
     text-align: center;
   }
-  
+
+  .buttonsnavitem:hover{
+    color: black;
+    background-color: aqua;
+    filter: blur(1px);
+  }
+  .buttonsnavitem:hover a{
+    color: black;
+  }
   .svgButton {
     width: 100%;
     height: 100%;
@@ -122,7 +125,6 @@
   }
   
   .svgButton:active rect {
-    stroke: orangered;
     transition: 0s;
   }
   
@@ -146,12 +148,13 @@
     text-decoration: none;
     padding: 0.2rem;
     transition: all 0.5s ease;
-    
+    filter: blur(1px);
   }
   
   .navlink:hover {
-    color: aqua;
-    transition: 1s;
+    color: black;
+    transition: .2s;
+
   }
 
   .navlink:active {
@@ -196,7 +199,7 @@
   
   /************************************* MEDIA QUERIES *****************************************/
   
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1300px) {
     .logo {
         left: 2rem;
       }
@@ -259,7 +262,6 @@
       right: 0px;
       height: 92vh;
       top: 8vh;
-      background-color: red;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -273,7 +275,6 @@
     .burger {
       display: block;
       cursor: pointer;
-      color: green;
     }
   
   }

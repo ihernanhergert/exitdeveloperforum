@@ -5,6 +5,7 @@ import Link from "next/link";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
+
   return (
     <>
       <nav className="navbar">
@@ -12,8 +13,7 @@ const NavBar = () => {
           <Link href="/">
             <a
               className="logo"
-              href="https://hernan-hergert.vercel.app/"
-              target="_blank"
+              href="/"
               rel="noopener noreferrer"
             >
               ExiT

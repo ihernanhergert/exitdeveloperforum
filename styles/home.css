@@ -1,4 +1,11 @@
 .main{
     max-width: 500px;
     margin: 0 auto;
+    font-family: monospace;
+}
+
+.containerData{
+    min-height: 100vh;
+    max-width: 70%;
+    margin: 0 auto;
 }

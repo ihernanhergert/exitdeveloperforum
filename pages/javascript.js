@@ -1,8 +1,9 @@
 import React from 'react'
+import JavascriptData from '../components/javascriptData'
 
 const javascript = () => {
   return (
-    <div>javascript</div>
+    <JavascriptData/>
   )
 }
 

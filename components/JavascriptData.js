@@ -77,8 +77,43 @@ var isPalindrome = function(head) {
     return compare(head, tail);
 }`;
 
+
+const question3 = `
+    function fibonacci (n){
+        if (n < 1) return 0
+        if (n <= 2) return 1
+
+        return fibonacci (n - 1) + fibonacci(n-2)
+
+    }
+
+    CON FUNCION GENERADORA
+
+    function* fibonacci () {
+        yield 0
+        yield 1
+
+        let firstRecent = 0
+        let secondRecent = 1
+
+        while(true) {
+            const value = firstRecent + secondRecent
+            yield value
+
+            firstRecent = secondRecent
+            secondRecent = value
+        }
+    }
+
+    const generator = fibonacci()
+    generator.next()
+    generator.next()
+    generator.next()
+    generator.next()
+`
+
   return (
-    <div>
+    <div className="containerData">
       {/* Pregunta 1 */}
       <h2> Pregunta 1 </h2>
       <h3>Convertir De Número Romano A Entero</h3>
@@ -88,6 +123,11 @@ var isPalindrome = function(head) {
       <h2> Pregunta 2 </h2>
       <h3>Palindrome true or false linkedList</h3>
       <pre>{question2}</pre>
+
+      {/* Pregunta 3 */}
+      <h2> Pregunta 3 </h2>
+      <h3> Fibonacci</h3>
+      <pre>{question3}</pre>
     </div>
   );
 };
