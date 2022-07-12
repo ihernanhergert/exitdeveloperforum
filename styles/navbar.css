@@ -1,0 +1,280 @@
+.header {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 20vh;
+    background-color: black;
+    position: relative;
+    font-family: monospace;
+  }
+  
+  .logoContainer{
+    position:relative;
+    top: 1rem;
+    left: 0;
+    width: 400px;
+  }
+
+  .logo {
+    font-size: 5rem;
+    text-decoration: none;
+    border: 4px solid var(--principal-color);
+    color: aqua;
+    animation:myfirst 5s infinite;
+    font-weight: 500;
+  }
+
+  @keyframes myfirst {
+    0% {color:aqua;}
+    100% {color:rgb(56, 0, 186);}
+}
+
+  .logo:hover {
+    animation: none;
+    filter: saturate(823%) blur(0.1rem) ;
+  }
+  
+  .logo:active{
+    background-color: orangered;
+    color: white;
+    border: 4px solid orangered
+  }
+
+  .pLogo{
+    color: white;
+    position: absolute;
+    top: 4rem;
+    left: 5rem;
+    opacity: 50%;
+  }
+  
+  .hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+  }
+  .button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .button {
+      display: block;
+    }
+  }
+  
+  .bar {
+    display: block;
+    width: 40px;
+    height: 6px;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+  }
+  @keyframes color-change2 {
+    0% { background-color: blue; }
+    100% { background-color: var(--principal-color); }
+  }
+  
+  .buttonsnavitem {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    color: var(--background-color);
+    background-color: var(--background-color);
+    border: 2px solid aqua;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .svgButton {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--background-color);
+  }
+  
+  .svgButton rect {
+    width: 100%;
+    height: 100%;
+    stroke: var(--principal-color);
+    stroke-width: 10px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: 0.9s ease all ;
+  }
+  
+  .svgButton:hover rect {
+    stroke-dashoffset: 0;
+  }
+  
+  .svgButton:active rect {
+    stroke: orangered;
+    transition: 0s;
+  }
+  
+  
+  /*****************************************       NavMenu     **************************/
+  .navmenu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navitem {
+    list-style: none;
+    margin: 0 auto;
+  }
+  
+  .navlink {
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 0.2rem;
+    transition: all 0.5s ease;
+    
+  }
+  
+  .navlink:hover {
+    color: aqua;
+    transition: 1s;
+  }
+
+  .navlink:active {
+    transition: 0s;
+  }
+
+  .navlinks {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navlinks a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+
+  }
+
+
+  
+ 
+  
+  .burger {
+    display: none;
+  }
+  
+  .burger div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+  }
+  
+  .navbar-active {
+    transform: translate(0%);
+  }
+  /******************************************** Footer ************************************/
+  .footer {
+    font-size: 1.5rem;
+  }
+
+  
+  /************************************* MEDIA QUERIES *****************************************/
+  
+  @media only screen and (max-width: 1000px) {
+    .logo {
+        left: 2rem;
+      }
+    .body {
+      overflow-x: hidden;
+    }
+    /******************************   NavMenu ******************************/
+    .navmenu {
+      position: absolute;
+      left: -100%;
+      top: 6.5rem;
+      flex-direction: column;
+      background-color: var(--background-color);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      height: 100vh;
+    }
+  
+    .navmenu.active {
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.408);
+      
+    }
+  
+    .navlink {
+      color: aqua;
+      width: 200px;
+    }
+
+
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
+      background-color: aqua;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+      -webkit-transform: translateY(-16px) rotate(-45deg);
+      transform: translateY(-16px) rotate(-45deg);
+      background-color: aqua;
+    }
+    .hamburger:hover .bar:nth-child(1),
+    .hamburger:hover .bar:nth-child(2),
+    .hamburger:hover .bar:nth-child(3){
+      background-color: aqua;
+    }
+    .navlinks {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+    .navlinks li {
+      opacity: 0;
+    }
+    .burger {
+      display: block;
+      cursor: pointer;
+      color: green;
+    }
+  
+  }
+  
